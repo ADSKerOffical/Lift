@@ -1,0 +1,197 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+
+local Window = OrionLib:MakeWindow({Name = "Budgie Hub", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddLabel("Auto farm")
+
+Tab:AddToggle({
+	Name = "Auto click",
+	Default = false,
+	Callback = function(Value)
+	aaa = Value
+	while aaa do
+	  wait(0.1)
+	local args = {
+    [1] = "Click"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+	end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto punching",
+	Default = false,
+	Callback = function(Value)
+		bbb = Value
+		while bbb do
+		  wait(0.1)
+		local args = {
+    [1] = "Punching",
+    [2] = workspace:WaitForChild("PowerTrainingFolder"):WaitForChild("Model")
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto protection",
+	Default = false,
+	Callback = function(Value)
+	ccc = Value
+		while ccc do
+		   wait(0.1)
+		local args = {
+    [1] = "Vitality"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto running",
+	Default = false,
+	Callback = function(Value)
+		ddd = Value
+		while ddd do
+		   wait(0.1)
+		local args = {
+    [1] = "Running"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto selling",
+	Default = false,
+	Callback = function(Value)
+		eee = Value
+		while eee do
+		   wait(0.1)
+		local args = {
+    [1] = "SellEnergy"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddLabel("Auto upgrade")
+
+Tab:AddToggle({
+	Name = "Auto rebirth",
+	Default = false,
+	Callback = function(Value)
+	fff = Value
+		while fff do
+		   wait(0.1)
+		local args = {
+    [1] = "Purchase",
+    [2] = "Rank"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Ascension",
+	Default = false,
+	Callback = function(Value)
+		jjj = Value
+		while jjj do
+		   wait(0.1)
+		local args = {
+    [1] = "Purchase",
+    [2] = "Ascension"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddLabel("Auto purchase")
+
+Tab:AddToggle({
+	Name = "Auto purchase strength",
+	Default = false,
+	Callback = function(Value)
+	kkk = Value
+		while kkk do
+		   wait(0.1)
+		local args = {
+    [1] = "Purchase",
+    [2] = "Strength"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto purchase endurance",
+	Default = false,
+	Callback = function(Value)
+		while hhh do
+		   wait(0.1)
+		local args = {
+    [1] = "Purchase",
+    [2] = "Endurance"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto purchase strength(all)",
+	Default = false,
+	Callback = function(Value)
+	rrr = Value
+		while rrr do
+		    wait(0.1)
+		local args = {
+    [1] = "PurchaseAll",
+    [2] = "Strength"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+		end
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto purchase endurance(all)",
+	Default = false,
+	Callback = function(Value)
+	yyy = Value
+	  while yyy do
+	wait(0.1)
+		local args = {
+    [1] = "PurchaseAll",
+    [2] = "Endurance"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Port1"):FireServer(unpack(args))
+        end
+	end    
+})
